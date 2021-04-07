@@ -16,7 +16,7 @@ jobs:
           publish: true
           imageName: shuye72/jd-base
           dockerFile: docker/Dockerfile
-          platform: linux/arm64,linux/arm/v6,linux/arm/v7
+          platform: linux/arm64,linux/arm/v6
           tag: gitee
           dockerUser: ${{ secrets.DOCKER_USERNAME }}
           dockerPassword: ${{ secrets.DOCKER_PASSWORD }}
