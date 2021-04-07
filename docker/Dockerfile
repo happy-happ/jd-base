@@ -66,5 +66,5 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 	&& cp -f $JD_DIR/docker/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh \
 	&& chmod 777 /usr/local/bin/docker-entrypoint.sh \
 	&& chmod 777 $JD_DIR/*.sh \
-	&& rm -rf /root/.npm # buildkit
+	&& rm -rf /root/.npm 
 ENTRYPOINT ["docker-entrypoint.sh"]
