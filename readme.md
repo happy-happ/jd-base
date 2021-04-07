@@ -1,47 +1,18 @@
-## 本项目未采用任何开源协议，项目为私有，不属于开源项目，拒绝任何人在其他项目中使用本项目中的任何代码。
+## 特别声明: 
 
-## 创建
-**从v3升级到v4请务必不保留配置文件，只保存好必要的信息之后全新安装。**
-```
-version: "2.0"
-services:
-  jd:
-    image: nevinee/jd:v4
-    container_name: jd
-    restart: always
-    tty: true
-    network_mode: bridge
-    hostname: jd
-    volumes:
-      - ./config:/jd/config
-      - ./log:/jd/log
-      - ./own:/jd/own             # own脚本目录，如需使用，建议映射
-      #- ./scripts:/jd/scripts    # 如果想要看到lxk0301大佬的js脚本，可以解除本行注释
-    ports:
-      - 5678:5678
-    environment: 
-      - ENABLE_TTYD=false             # 是否在启动容器时自动启动网页终端，当ENABLE_WEB_PANEL=true时此项设置才生效
-      - ENABLE_WEB_PANEL=true         # 是否在启动容器时自动启动控制面板
-      - ENABLE_HANGUP=true            # 是否在启动容器时自动启动挂机程序
-```
-创建好后请阅读映射的config目录下的的config.sh，并根据注释修改。
-## 命令
-jtask mtask otask链接的都是同一个脚本，m=my，o=own，j=jd。三者区分仅用在crontab.list中，以区别不同类型任务，手动运行直接jtask即可。
-```
-docker exec -it jd jtask   # 运行jd_scripts脚本，类似于v3版本的jd命令
-docker exec -it jd otask   # 运行own脚本，详见配置文件说明
-docker exec -it jd mtask   # 运行你自己的脚本
-docker exec -it jd jlog    # 删除旧日志，类似于v3版本的rm_log命令
-docker exec -it jd jup     # 更新所有脚本，包括jd_scripts脚本和own脚本，自动增删定时任务，类似于v3版本的git_pull命令，但更强大
-docker exec -it jd jcode   # 导出所有互助码，可以准确识别没有码的ID，比v3版本的export_sharecode命令更智能
-docker exec -it jd jcsv    # 记录豆豆变化情况，在log目录下存为csv文件
-```
+* 本仓库发布的jd-base项目中涉及的任何解锁和解密分析脚本，仅用于测试和学习研究，禁止用于商业用途，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断.
 
-## 非Docker用户
-linux、macos、android termux用户自行安装依赖：`perl nodejs npm yarn perl wget git crond ssh-client`以及node包`pm2`，自行解决ssh key的问题，并备份好自己的crontab以后，再进行下列操作：
-```
-git clone -b v4 git@<你设置的HOST>:nevinee/jd_shell.git jd
-cd jd
-./jup.sh
-```
-配置好`config/config.sh`，之后请根据`config/crontab.list`中的命令来使用即可，大概率是任意路径全局可用命令`jup jtask mtask otask jlog jcsv jcode`，含义同docker说明，而无需输入完整路径。如需要面板，直接输入`jpanel`即可。
+* 本项目内所有资源文件，禁止任何公众号、自媒体进行任何形式的转载、发布。
+
+* shuyeshuye对任何脚本问题概不负责，包括但不限于由任何脚本错误导致的任何损失或损害.
+
+* 间接使用脚本的任何用户，包括但不限于建立VPS或在某些行为违反国家/地区法律或相关法规的情况下进行传播, shuyeshuye 对于由此引起的任何隐私泄漏或其他后果概不负责.
+
+* 请勿将jd-base项目的任何内容用于商业或非法目的，否则后果自负.
+
+* 如果任何单位或个人认为该项目的脚本可能涉嫌侵犯其权利，则应及时通知并提供身份证明，所有权证明，我们将在收到认证文件后删除相关脚本.
+
+* 任何以任何方式查看此项目的人或直接或间接使用该jd-base项目的任何脚本的使用者都应仔细阅读此声明。shuyeshuye 保留随时更改或补充此免责声明的权利。一旦使用并复制了任何相关脚本或jd-base项目的规则，则视为您已接受此免责声明.
+
+ **您必须在下载后的24小时内从计算机或手机中完全删除以上内容.**  </br>
+ ***您使用或者复制了本仓库且本人制作的任何脚本，则视为`已接受`此声明，请仔细阅读*** 
