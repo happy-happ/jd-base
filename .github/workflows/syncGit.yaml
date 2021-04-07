@@ -24,6 +24,6 @@ jobs:
         with:
           src: ${{ secrets.SRC_USER }}
           dst: ${{ secrets.DST_USER }}
-          static_list: "jd-base1"
+          static_list: "jd-base"
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}

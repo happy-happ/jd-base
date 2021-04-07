@@ -18,7 +18,7 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
 	ENABLE_WEB_PANEL=false \
 	ENABLE_HANGUP=false \
 	ENABLE_RESET_REPO_URL=true \
-	JD_SHELL_URL=git@jd_shell_gitee:shuye72/jd-base1.git \
+	JD_SHELL_URL=git@jd_shell_gitee:shuye72/jd-base.git \
 	JD_SCRIPTS_URL=git@jd_scripts_gitee:shuye72/MyActions.git 
 WORKDIR /jd
 RUN |10
