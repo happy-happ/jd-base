@@ -22,8 +22,8 @@ jobs:
         uses: Yikun/hub-mirror-action@master
         if: env.dst_key
         with:
-          src: ${{ secrets.SRC_USER }}
-          dst: ${{ secrets.DST_USER }}
+          src: github/wuzhi-docker1
+          dst: gitee/shuye72
           static_list: "jd-base"
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
