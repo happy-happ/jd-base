@@ -1,6 +1,6 @@
-## Version: v3.31.0
-## Date: 2021-03-20
-## Update Content: 增加jd_city相关环境变量，自行对比替换
+## Version: v3.32.0
+## Date: 2021-04-22
+## Update Content: 增加jd_health相关环境变量，自行对比替换
 
 ## 上面版本号中，如果第2位数字有变化，那么代表增加了新的参数，如果只有第3位数字有变化，仅代表更新了注释，没有增加新的参数，可更新可不更新
 
@@ -144,23 +144,23 @@ AutoHelpOther=""
 
 export  JD_CITY_EXCHANGE=""
 
-################################## 定义jd_City互助（临时） ##################################
+################################## 定义jd_health互助（临时） ##################################
 ## 具体填法及要求详见本文件最下方“互助码填法示例”
-MyCity1=""
-MyCity2=""
-MyCity3=""
-MyCity4=""
-MyCity5=""
-MyCity6=""
-MyCityA=""
-MyCityB=""
+Myhealth1=""
+Myhealth2=""
+Myhealth3=""
+Myhealth4=""
+Myhealth5=""
+Myhealth6=""
+MyhealthA=""
+MyhealthB=""
 
-ForOtherCity1=""
-ForOtherCity2=""
-ForOtherCity3=""
-ForOtherCity4=""
-ForOtherCity5=""
-ForOtherCity6=""
+ForOtherhealth1=""
+ForOtherhealth2=""
+ForOtherhealth3=""
+ForOtherhealth4=""
+ForOtherhealth5=""
+ForOtherhealth6=""
 
 ################################## 定义jd_fruit互助（选填） ##################################
 ## 具体填法及要求详见本文件最下方“互助码填法示例”
