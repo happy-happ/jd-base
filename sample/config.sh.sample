@@ -140,23 +140,10 @@ export JD_BEAN_STOP=""
 AutoHelpOther=""
 
 
-################################## 定义jd_tcl互助（临时） ##################################
-## 具体填法及要求详见本文件最下方“互助码填法示例”
-MyTCL1=""
-MyTCL2=""
-MyTCL3=""
-MyTCL4=""
-MyTCL5=""
-MyTCL6=""
-MyTCLA=""
-MyTCLB=""
+################################## 定义jd_tcl加购（临时） ##################################
+## 是否加购物车
 
-ForOtherTCL1=""
-ForOtherTCL2=""
-ForOtherTCL3=""
-ForOtherTCL4=""
-ForOtherTCL5=""
-ForOtherTCL6=""
+export PURCHASE_SHOPS=""
 
 ################################## 定义jd_health互助（临时） ##################################
 ## 具体填法及要求详见本文件最下方“互助码填法示例”
