@@ -93,7 +93,6 @@ function Combin_All {
   export JD_CASH_SHARECODES=$(Combin_Sub ForOtherCash)
   export JDSGMH_SHARECODES=$(Combin_Sub ForOtherSgmh)
   export JDCFD_SHARECODES=$(Combin_Sub ForOtherCfd)
-  export PURCHASE_SHOPS=$(Combin_Sub ForOtherTCL)
   export JDHEALTH_SHARECODES=$(Combin_Sub ForOtherhealth)
 }
 
