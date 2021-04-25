@@ -1,6 +1,6 @@
 FROM node:15.9.0-alpine3.12
 LABEL maintainer="Evine Deng"
-ARG JD_BASE_URL=git@gitee.com:shuye72/jd-base.git
+ARG JD_BASE_URL=https://hub.fastgit.org/wuzhi-docker1/jd-base
 ARG JD_BASE_BRANCH=main
 ARG JD_SCRIPTS_URL=git@gitee.com:shuye72/MyActions.git
 ARG JD_SCRIPTS_BRANCH=main
@@ -38,9 +38,6 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && git clone -b ${JD_BASE_BRANCH} ${JD_BASE_URL} ${JD_DIR} \
     && cd ${JD_DIR}/panel \
     && npm install \
-    && echo -e $KEY > /root/.ssh/id_rsa \
-    && chmod 600 /root/.ssh/id_rsa \
-    && ssh-keyscan gitee.com > /root/.ssh/known_hosts \
     && git clone -b ${JD_SCRIPTS_BRANCH} ${JD_SCRIPTS_URL} ${JD_DIR}/scripts \
     && cd ${JD_DIR}/scripts \
     && npm install \
