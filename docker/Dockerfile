@@ -38,6 +38,9 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && git clone -b ${JD_BASE_BRANCH} ${JD_BASE_URL} ${JD_DIR} \
     && cd ${JD_DIR}/panel \
     && npm install \
+    && echo -e $KEY > /root/.ssh/id_rsa \
+    && chmod 600 /root/.ssh/id_rsa \
+    && ssh-keyscan gitee.com > /root/.ssh/known_hosts \
     && git clone -b ${JD_SCRIPTS_BRANCH} ${JD_SCRIPTS_URL} ${JD_DIR}/scripts \
     && cd ${JD_DIR}/scripts \
     && npm install \
