@@ -1,6 +1,6 @@
-## Version: v3.34.0
-## Date: 2021-04-30
-## Update Content: 增加jd_cash环境变量CASH_EXCHANGE已经export,主要用于兑换京豆，默认不兑换，如想兑换改为true
+## Version: v3.35.0
+## Date: 2021-05-19
+## Update Content: 增加关闭longzhuzhu京豆雨通知RAIN_NOTIFY_CONTROL，默认开启通知，false为关闭（不会自动替换,请利用对比工具手动对比更新）
 
 ## 上面版本号中，如果第2位数字有变化，那么代表增加了新的参数，如果只有第3位数字有变化，仅代表更新了注释，没有增加新的参数，可更新可不更新
 
@@ -404,24 +404,10 @@ ForOtherCfd4=""
 ForOtherCfd5=""
 ForOtherCfd6=""
 
+################################## 定义jd_super_redrain通知（选填） ##################################
+## 默认开启false为关闭
 
-################################## 定义jd_global活动互助（选填） ##################################
-## 具体填法及要求详见本文件最下方“互助码填法示例”
-MyGlobal1=""
-MyGlobal2=""
-MyGlobal3=""
-MyGlobal4=""
-MyGlobal5=""
-MyGlobal6=""
-MyGlobalA=""
-MyGlobalB=""
-
-ForOtherGlobal1=""
-ForOtherGlobal2=""
-ForOtherGlobal3=""
-ForOtherGlobal4=""
-ForOtherGlobal5=""
-ForOtherGlobal6=""
+export RAIN_NOTIFY_CONTROL=""
 
 ################################## 定义jd_cash京豆兑换（选填） ##################################
 ## jd_cash京豆兑换，花费2元红包兑换200京豆，一周可换四次；
