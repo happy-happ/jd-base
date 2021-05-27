@@ -23,7 +23,7 @@ jobs:
         if: env.dst_key
         with:
           src: github/wuzhi-docker1
-          dst: gitee/shuye72
+          dst: gitee/Ewardliu
           static_list: "jd-base"
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
